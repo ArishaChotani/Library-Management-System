@@ -1,0 +1,47 @@
+Test case for the Register::prompt() function:
+a. Input: 1 (for student)
+Password: strongpassword1
+First Name: John
+Last Name: Doe
+ID: 12345
+Expected Output: The student with the given details should be created and their details should be written to the sample.txt file. User menu should be displayed for the student.
+b. Input: 2 (for teacher)
+Password: weakpassword
+First Name: Jane
+Last Name: Smith
+ID: TF6789
+Expected Output: The teacher with the given1 details should be created and their details should be written to the sample.txt file. Employee ID starts with "TF" by design.
+
+Test case for the Login::prompt() function:
+a. Input: 1 (for teacher)
+ID: TF1234
+Password: strongpassword1
+Expected Output: Login should be successful and User menu should be displayed for the teacher.
+b. Input: 2 (for student)
+ID: 98765
+Password: weakpassword
+Expected Output: Login should fail and AnotherPrompt() function should be called.
+
+Test case for the Menu::UserMenu() function:
+a. Input: 1 (for borrow)
+Expected Output: IssueItems() function should be called for the user.
+b. Input: 2 (for return)
+Expected Output: ReturnItems() function should be called for the user.
+c. Input: 3
+Expected Output: Invalid input message should be displayed.
+
+Test case for the Menu::AdminMenu() function:
+a. Input: 1 (for modify)
+Expected Output: Modify function should be called.
+b. Input: 2 (for add)
+Expected Output: addStuff() function should be called for the admin.
+c. Input: 3 (for delete)
+Expected Output: Delete function should be called.
+
+Test case for the Menu::AdminPrompt() function:
+a. Input: Username: admin
+Password: password
+Expected Output: Admin should be successfully logged in and Admin menu should be displayed.
+b. Input: Username: user
+Password: password
+Expected Output: Login should fail and AdminPrompt() function should be called again.
